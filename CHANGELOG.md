@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/zinapostica/demo-release-please/compare/v1.4.0...v1.5.0) (2025-04-07)
+
+
+### Features
+
+* bump minor version ([688350a](https://github.com/zinapostica/demo-release-please/commit/688350a2e83f0e434f9a8379cde7c290b62c29e1))
+
+
+### CI
+
+* added intial setup for github workflows ([6a12443](https://github.com/zinapostica/demo-release-please/commit/6a12443ef8c613ab0528ce81905bdbcab762e71e))
+
 ## [1.4.0](https://github.com/zinapostica/demo-release-please/compare/v1.3.1...v1.4.0) (2025-04-07)
 
 
