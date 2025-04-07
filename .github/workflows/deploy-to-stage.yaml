@@ -1,0 +1,38 @@
+name: Stage Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-to-stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.ref || github.ref }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      # Build the application
+      - name: Build application
+        run: npm run build
+      
+      - name: Deploy Release
+        run: |
+          echo "Deploying ${{ github.event.inputs.ref }}"
+          cat dist/index.js
+          
+      - name: Deployment Status
+        run: |
+          echo "Deployed ${{ github.event.inputs.ref }} to stage"

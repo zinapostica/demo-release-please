@@ -1,0 +1,38 @@
+name: Production Deployment
+
+on:
+  workflow_call:
+    inputs:
+      tag_name:
+        required: true
+        type: string
+        description: "The tag name of the release to deploy"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.tag_name || github.ref }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      # Build the application
+      - name: Build application
+        run: npm run build
+      
+      - name: Deploy Release
+        run: |
+          echo "Deploying ${{ inputs.tag_name || github.ref }}"
+          cat dist/package.json
+          
+      - name: Deployment Status
+        run: |
+          echo "Deployment of ${{ inputs.tag_name || github.ref }} completed" 
