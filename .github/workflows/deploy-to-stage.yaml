@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.inputs.ref || github.ref }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -30,9 +28,9 @@ jobs:
       
       - name: Deploy Release
         run: |
-          echo "Deploying ${{ github.event.inputs.ref }}"
+          echo "Deploying to stage from ${{ github.ref }}"
           cat dist/index.js
           
       - name: Deployment Status
         run: |
-          echo "Deployed ${{ github.event.inputs.ref }} to stage"
+          echo "Deployed from ${{ github.ref }} to stage"
