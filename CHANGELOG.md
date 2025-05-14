@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/zinapostica/demo-release-please/compare/v1.7.0...v1.7.1) (2025-05-14)
+
+
+### Testing
+
+* dfdhefhek ([ada640b](https://github.com/zinapostica/demo-release-please/commit/ada640be5e7cdcb8d2217fae4bde853f27276403))
+
 ## [1.7.0](https://github.com/zinapostica/demo-release-please/compare/v1.6.0...v1.7.0) (2025-05-14)
 
 
