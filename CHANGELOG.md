@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://github.com/zinapostica/demo-release-please/compare/v1.5.0...v1.6.0) (2025-05-14)
+
+
+### Features
+
+* test 1 ([acd21bb](https://github.com/zinapostica/demo-release-please/commit/acd21bb4822c865a0e0708c9e6379cff4af301ba))
+
+
+### Bug Fixes
+
+* test 2 ([97a9c8d](https://github.com/zinapostica/demo-release-please/commit/97a9c8db4c98b0d9c064f4067feb9577ee25937e))
+
 ## [1.5.0](https://github.com/zinapostica/demo-release-please/compare/v1.4.0...v1.5.0) (2025-04-07)
 
 
