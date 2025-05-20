@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.3](https://github.com/zinapostica/demo-release-please/compare/v1.7.2...v1.7.3) (2025-05-20)
+
+
+### Bug Fixes
+
+* another hot potato ([aea3f09](https://github.com/zinapostica/demo-release-please/commit/aea3f09821b50f5642fda1052c3b09e96e7c256c))
+* hotpotato ([7748448](https://github.com/zinapostica/demo-release-please/commit/7748448b371372e2792a00388ac7cfb9969ada28))
+* target branch ([bd3090d](https://github.com/zinapostica/demo-release-please/commit/bd3090d314426b40ccbb18098f6742fb56cd984e))
+
 ## [1.7.2](https://github.com/zinapostica/demo-release-please/compare/v1.7.1...v1.7.2) (2025-05-14)
 
 
