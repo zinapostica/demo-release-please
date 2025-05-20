@@ -63,7 +63,9 @@
                     "section": "Reverts",
                     "hidden": false
                 }
-            ]
+            ],
+            "extra-files": [],
+            "exclude-changes-in-changelog-regexp": "--no-changelog$"
         }
     }
 }
