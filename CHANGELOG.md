@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.4](https://github.com/zinapostica/demo-release-please/compare/v1.7.3...v1.7.4) (2025-05-20)
+
+
+### Bug Fixes
+
+* target branch ([c88e50c](https://github.com/zinapostica/demo-release-please/commit/c88e50c6b3a3d2828811a3639c43254886b8793b))
+
 ## [1.7.3](https://github.com/zinapostica/demo-release-please/compare/v1.7.2...v1.7.3) (2025-05-20)
 
 
