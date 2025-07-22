@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.4](https://github.com/zinapostica/demo-release-please/compare/v1.8.3...v1.8.4) (2025-07-22)
+
+
+### Bug Fixes
+
+* formatting issue ([f22292b](https://github.com/zinapostica/demo-release-please/commit/f22292bb859371af775de1e28a37f56185b1c73e))
+* releasr body not being parsed correctly ([cfadf3d](https://github.com/zinapostica/demo-release-please/commit/cfadf3daf637280253ab5959fc6f70803535653d))
+
 ## [1.8.3](https://github.com/zinapostica/demo-release-please/compare/v1.8.2...v1.8.3) (2025-07-22)
 
 
