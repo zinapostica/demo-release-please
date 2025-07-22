@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.10.0](https://github.com/zinapostica/demo-release-please/compare/v1.9.0...v1.10.0) (2025-07-22)
+
+
+### ✨ Features
+
+* added emojis for each section ([67e8dd8](https://github.com/zinapostica/demo-release-please/commit/67e8dd8996b59a5c2901e6613810cafb08668107))
+
+
+### ♻️ Refactoring
+
+* add link to github release ([e710e7c](https://github.com/zinapostica/demo-release-please/commit/e710e7ca6d0188312da64d7690ee5b0d0e6ce435))
+
 ## [1.9.0](https://github.com/zinapostica/demo-release-please/compare/v1.8.5...v1.9.0) (2025-07-22)
 
 
