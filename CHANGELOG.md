@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/zinapostica/demo-release-please/compare/v1.8.2...v1.8.3) (2025-07-22)
+
+
+### Other
+
+* added debug ([8778a3e](https://github.com/zinapostica/demo-release-please/commit/8778a3e82a668066c0ff9ea63a39629e97dd4230))
+
 ## [1.8.2](https://github.com/zinapostica/demo-release-please/compare/v1.8.1...v1.8.2) (2025-07-22)
 
 
