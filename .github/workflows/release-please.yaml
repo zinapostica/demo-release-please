@@ -26,6 +26,7 @@ jobs:
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       tag_name: ${{ steps.release.outputs.tag_name }}
+      release_body: ${{ steps.release.outputs.release_body }}
          
   # This job will trigger when a new release is created from any branch
   deploy-release:
@@ -35,10 +36,41 @@ jobs:
     with:
       tag_name: ${{ needs.release-please.outputs.tag_name }}
 
-  # This job will cherry-pick hotfix changes to main when a hotfix is released
-  cherry-pick-to-main:
-    needs: [release-please, deploy-release]
-    if: ${{ needs.release-please.outputs.release_created && startsWith(github.ref, 'refs/heads/hotfix-') }}
-    uses: ./.github/workflows/hotfix.yaml
-    with:
-      tag_name: ${{ needs.release-please.outputs.tag_name }}
+  # This job will post release notes to Slack when a release is created
+  slack-notification:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post release notes to Slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          channel-id: 'bot-dev-test'
+          payload: |
+            {
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "🚀 New Release: ${{ needs.release-please.outputs.tag_name }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Repository:* ${{ github.repository }}\n*Branch:* ${{ github.ref_name }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Release Notes:*\n${{ needs.release-please.outputs.release_body }}"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
