@@ -26,6 +26,7 @@ jobs:
       release_created: ${{ steps.release.outputs.release_created }}
       tag_name: ${{ steps.release.outputs.tag_name }}
       body: ${{ steps.release.outputs.body }}
+      html_url: ${{ steps.release.outputs.html_url }}
          
   # This job will trigger when a new release is created from any branch
   deploy-release:
@@ -67,6 +68,7 @@ jobs:
           RELEASE_BODY="${{ needs.release-please.outputs.body }}" \
           TAG_NAME="${{ needs.release-please.outputs.tag_name }}" \
           REPOSITORY="${{ github.repository }}" \
+          HTML_URL="${{ needs.release-please.outputs.html_url }}" \
           node scripts/prepare-slack-message.js >> $GITHUB_OUTPUT
       
       - name: Post release notes to Slack

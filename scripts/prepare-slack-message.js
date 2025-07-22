@@ -8,8 +8,8 @@
 function convertToSlackFormat(markdown) {
   let text = markdown;
   
-  // Convert GitHub headers to bold text
-  text = text.replace(/^## \[([^\]]+)\]\([^)]+\) \(([^)]+)\)$/gm, '*$1 ($2)*');
+  // Convert GitHub headers to bold text with clickable links
+  text = text.replace(/^## \[([^\]]+)\]\([^)]+\) \(([^)]+)\)$/gm, '*$1 ($2)* - <${process.env.HTML_URL}|View Release>');
   text = text.replace(/^### (.+)$/gm, '*$1*');
   
   // Convert GitHub links to Slack links
