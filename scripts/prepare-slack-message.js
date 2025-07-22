@@ -8,8 +8,10 @@
 function convertToSlackFormat(markdown) {
   let text = markdown;
   
-  // Convert GitHub headers to bold text with clickable links
-  text = text.replace(/^## \[([^\]]+)\]\([^)]+\) \(([^)]+)\)$/gm, `*$1 ($2)* - <${process.env.HTML_URL}|View Release>`);
+  // Remove the version header line completely (the ## line)
+  text = text.replace(/^## \[([^\]]+)\]\([^)]+\) \(([^)]+)\)$/gm, '');
+  
+  // Convert section headers to bold text
   text = text.replace(/^### (.+)$/gm, '*$1*');
   
   // Convert GitHub links to Slack links
@@ -18,7 +20,10 @@ function convertToSlackFormat(markdown) {
   // Convert bullet points (keep as is, Slack supports them)
   text = text.replace(/^\* (.+)$/gm, '• $1');
   
-  return text.trim();
+  // Remove extra newlines and clean up
+  text = text.replace(/\n\n+/g, '\n\n').trim();
+  
+  return text;
 }
 
 // Convert the release body to Slack-compatible format
@@ -28,10 +33,10 @@ const slackFormattedNotes = convertToSlackFormat(process.env.RELEASE_BODY);
 const slackPayload = {
   blocks: [
     {
-      type: "header",
+      type: "section",
       text: {
-        type: "plain_text",
-        text: `🚀 New Release: ${process.env.TAG_NAME}`
+        type: "mrkdwn",
+        text: `🚀 New Release: <${process.env.HTML_URL}|${process.env.TAG_NAME}>`
       }
     },
     {
@@ -45,7 +50,7 @@ const slackPayload = {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `*Release Notes:*\n${slackFormattedNotes}`
+        text: slackFormattedNotes
       }
     }
   ]
