@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/zinapostica/demo-release-please/compare/v1.8.5...v1.9.0) (2025-07-22)
+
+
+### Features
+
+* render markdown in slack format ([8b56b1c](https://github.com/zinapostica/demo-release-please/commit/8b56b1c17370ca6bf3d22a642646447715c20d99))
+
 ## [1.8.5](https://github.com/zinapostica/demo-release-please/compare/v1.8.4...v1.8.5) (2025-07-22)
 
 
