@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.5](https://github.com/zinapostica/demo-release-please/compare/v1.8.4...v1.8.5) (2025-07-22)
+
+
+### Bug Fixes
+
+* script not found ([be54e89](https://github.com/zinapostica/demo-release-please/commit/be54e89812bfda4c4ade96b83ea21096977e2c87))
+
 ## [1.8.4](https://github.com/zinapostica/demo-release-please/compare/v1.8.3...v1.8.4) (2025-07-22)
 
 
