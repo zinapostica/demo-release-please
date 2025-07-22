@@ -36,8 +36,11 @@ const slackPayload = {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `🚀 New Release: <${process.env.HTML_URL}|${process.env.TAG_NAME}>`
+        text: `*🚀 New Release: <${process.env.HTML_URL}|${process.env.TAG_NAME}>* 🚀`
       }
+    },
+    {
+      type: "divider"
     },
     {
       type: "section",
