@@ -41,6 +41,22 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created }}
     runs-on: ubuntu-latest
     steps:
+      - name: Debug release-please outputs
+        run: |
+          echo "=== Release Please Outputs Debug ==="
+          echo "release_created: '${{ needs.release-please.outputs.release_created }}'"
+          echo "tag_name: '${{ needs.release-please.outputs.tag_name }}'"
+          echo "body: '${{ needs.release-please.outputs.body }}'"
+          echo "=== End Debug ==="
+          
+          echo "=== Raw body content (hex dump) ==="
+          echo "${{ needs.release-please.outputs.body }}" | hexdump -C
+          echo "=== End hex dump ==="
+          
+          echo "=== Body content length ==="
+          echo "${{ needs.release-please.outputs.body }}" | wc -c
+          echo "=== End length ==="
+      
       - name: Post release notes to Slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
