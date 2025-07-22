@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/zinapostica/demo-release-please/compare/v1.10.0...v1.10.1) (2025-07-22)
+
+
+### 🐛 Bug Fixes
+
+* interpolation ([c1e1c81](https://github.com/zinapostica/demo-release-please/commit/c1e1c81880791893888037be5dbc0457a1545b65))
+
 ## [1.10.0](https://github.com/zinapostica/demo-release-please/compare/v1.9.0...v1.10.0) (2025-07-22)
 
 
