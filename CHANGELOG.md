@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/zinapostica/demo-release-please/compare/v1.10.2...v1.11.0) (2025-07-22)
+
+
+### ✨ Features
+
+* test pr link ([#18](https://github.com/zinapostica/demo-release-please/issues/18)) ([c92345a](https://github.com/zinapostica/demo-release-please/commit/c92345adf9d033c476cac164f77e1a96b6b23a5b))
+
 ## [1.10.2](https://github.com/zinapostica/demo-release-please/compare/v1.10.1...v1.10.2) (2025-07-22)
 
 
