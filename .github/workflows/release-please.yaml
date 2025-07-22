@@ -59,14 +59,14 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*Repository:* ${{ github.repository }}\n*Branch:* ${{ github.ref_name }}"
+                    "text": "*Repository:* ${{ github.repository }}"
                   }
                 },
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*Release Notes:*\n${{ needs.release-please.outputs.release_body }}"
+                    "text": "*Release Notes:*\n${{ needs.release-please.outputs.body }}"
                   }
                 }
               ]
