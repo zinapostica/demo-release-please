@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.2](https://github.com/zinapostica/demo-release-please/compare/v1.11.1...v1.11.2) (2025-07-22)
+
+
+### 🔧 Other
+
+* remove section ([563fba0](https://github.com/zinapostica/demo-release-please/commit/563fba0d8d22c2cb275c94f2aa0c0512bcb3d4d2))
+
 ## [1.11.1](https://github.com/zinapostica/demo-release-please/compare/v1.11.0...v1.11.1) (2025-07-22)
 
 
