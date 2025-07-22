@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/zinapostica/demo-release-please/compare/v1.8.0...v1.8.1) (2025-07-22)
+
+
+### Bug Fixes
+
+* release notes not showing up ([b5b7ff6](https://github.com/zinapostica/demo-release-please/commit/b5b7ff6eed8f7c4bf7a127cfdaa29599b10fd53c))
+
 ## [1.8.0](https://github.com/zinapostica/demo-release-please/compare/v1.7.3...v1.8.0) (2025-07-22)
 
 
