@@ -57,35 +57,19 @@ jobs:
           echo "${{ needs.release-please.outputs.body }}" | wc -c
           echo "=== End length ==="
       
-      - name: Post release notes to Slack
+      - name: Prepare release notes for Slack
+        id: prepare-notes
+        run: |
+          # Run the script to prepare release notes for Slack
+          RELEASE_BODY="${{ needs.release-please.outputs.body }}" \
+          TAG_NAME="${{ needs.release-please.outputs.tag_name }}" \
+          REPOSITORY="${{ github.repository }}" \
+          node scripts/prepare-slack-message.js >> $GITHUB_OUTPUT
+      
+            - name: Post release notes to Slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
           channel-id: 'bot-dev-test'
-          payload: |
-            {
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "🚀 New Release: ${{ needs.release-please.outputs.tag_name }}"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Repository:* ${{ github.repository }}"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Release Notes:*\n${{ needs.release-please.outputs.body }}"
-                  }
-                }
-              ]
-            }
+          payload: ${{ steps.prepare-notes.outputs.slack_payload }}
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
