@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/zinapostica/demo-release-please/compare/v1.10.1...v1.10.2) (2025-07-22)
+
+
+### ♻️ Refactoring
+
+* changed the release notes formatting ([9f5b908](https://github.com/zinapostica/demo-release-please/commit/9f5b908d685968a6cb1b4899945fd77551750879))
+
 ## [1.10.1](https://github.com/zinapostica/demo-release-please/compare/v1.10.0...v1.10.1) (2025-07-22)
 
 
