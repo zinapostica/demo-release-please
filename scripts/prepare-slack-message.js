@@ -5,6 +5,24 @@
  * Creates a properly formatted JSON payload for Slack API
  */
 
+function convertToSlackFormat(markdown) {
+  let text = markdown;
+  
+  // Convert GitHub headers to bold text
+  text = text.replace(/^## \[([^\]]+)\]\([^)]+\) \(([^)]+)\)$/gm, '*$1 ($2)*');
+  text = text.replace(/^### (.+)$/gm, '*$1*');
+  
+  // Convert GitHub links to Slack links
+  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<$2|$1>');
+  
+  // Convert bullet points (keep as is, Slack supports them)
+  text = text.replace(/^\* (.+)$/gm, '• $1');
+  
+  return text.trim();
+}
+
+// Convert the release body to Slack-compatible format
+const slackFormattedNotes = convertToSlackFormat(process.env.RELEASE_BODY);
 
 // Create the Slack payload
 const slackPayload = {
@@ -27,7 +45,7 @@ const slackPayload = {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `*Release Notes:*\n${process.env.RELEASE_BODY}`
+        text: `*Release Notes:*\n${slackFormattedNotes}`
       }
     }
   ]
