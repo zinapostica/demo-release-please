@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.8.0](https://github.com/zinapostica/demo-release-please/compare/v1.7.3...v1.8.0) (2025-07-22)
+
+
+### Features
+
+* test slack release ([2e8c631](https://github.com/zinapostica/demo-release-please/commit/2e8c631c1e8e4d00c949e60bd6f448497232f2f4))
+
+
+### Bug Fixes
+
+* target branch ([c88e50c](https://github.com/zinapostica/demo-release-please/commit/c88e50c6b3a3d2828811a3639c43254886b8793b))
+
+
+### Other
+
+* test ([19da5b0](https://github.com/zinapostica/demo-release-please/commit/19da5b0b46136d3697edef7917a7efdeef5e0676))
+
+
+### Documentation
+
+* test release-please after cleanup ([879384e](https://github.com/zinapostica/demo-release-please/commit/879384e4666a670026ba319b235dba44c2ba6dff))
+
 ## [1.7.3](https://github.com/zinapostica/demo-release-please/compare/v1.7.2...v1.7.3) (2025-05-20)
 
 
