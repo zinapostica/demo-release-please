@@ -46,13 +46,6 @@ const slackPayload = {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `*Repository:* ${process.env.REPOSITORY}`
-      }
-    },
-    {
-      type: "section",
-      text: {
-        type: "mrkdwn",
         text: slackFormattedNotes
       }
     }
