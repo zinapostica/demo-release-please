@@ -4,8 +4,11 @@
         ".": {
             "skip-github-release": false,
             "release-type": "node",
-            "package-name": "demo-release-please",
+            "package-name": "demo",
             "include-component-in-tag": false,
+            "release-branches": [
+                "main"
+            ],
             "pull-request-title-pattern": "chore(release): v${version}",
             "changelog-sections": [
                 {
